@@ -18,22 +18,6 @@ A full-stack Airbnb-inspired web application built using **Node.js, Express.js, 
 * Session management
 * Responsive user interface using Bootstrap
 
----
-
-## 📸 Project Screenshots
-
-### 🏠 Home Page
-![Uploading {38918EC1-BEE2-4763-B0FF-A429DA737856}.png…]()
-
-
-
-### 👤 User Registration Page
-
-![Uploading {15CFE3DB-93AA-4528-8464-4462A6010B0F}.png…]()
-
-
----
-
 ## 🛠 Tech Stack
 
 ### Frontend
