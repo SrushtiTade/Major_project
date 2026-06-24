@@ -1,0 +1,74 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="auth-page">
+
+  <!-- Left: Form -->
+  <div class="auth-left">
+    <div class="auth-card">
+
+      <div class="text-center mb-4">
+        <i class="fa-solid fa-compass auth-logo"></i>
+        <h2 class="auth-title mt-2">WanderLust</h2>
+        <p class="auth-subtitle">Create your account</p>
+      </div>
+
+      <form action="/signup" method="POST" novalidate class="needs-validation">
+
+        <div class="auth-input-group mb-3">
+          <span class="auth-input-icon"><i class="fa-solid fa-user"></i></span>
+          <input type="text" name="username" class="auth-input"
+            placeholder="Username" required autocomplete="username">
+          <div class="invalid-feedback">Username is required.</div>
+        </div>
+
+        <div class="auth-input-group mb-3">
+          <span class="auth-input-icon"><i class="fa-solid fa-envelope"></i></span>
+          <input type="email" name="email" class="auth-input"
+            placeholder="Email address" required autocomplete="email">
+          <div class="invalid-feedback">Valid email is required.</div>
+        </div>
+
+        <div class="auth-input-group mb-4">
+          <span class="auth-input-icon"><i class="fa-solid fa-lock"></i></span>
+          <input type="password" name="password" id="signupPassword" class="auth-input"
+            placeholder="Password" required autocomplete="new-password">
+          <span class="auth-input-icon-right toggle-password" data-target="signupPassword">
+            <i class="fa-solid fa-eye"></i>
+          </span>
+          <div class="invalid-feedback">Password is required.</div>
+        </div>
+
+        <button class="btn auth-btn w-100">Create Account</button>
+      </form>
+
+      <div class="auth-divider"><span>or</span></div>
+
+      <p class="text-center auth-switch">
+        Already have an account? <a href="/login">Log in</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Right: Image Panel -->
+  <div class="auth-right">
+    <div class="auth-right-overlay">
+      <h2 class="auth-right-title">Explore the World</h2>
+      <p class="auth-right-sub">Find unique places to stay, from cozy cottages to luxury villas.</p>
+      <div class="auth-right-stats">
+        <div class="auth-stat">
+          <span class="auth-stat-num">10K+</span>
+          <span class="auth-stat-label">Listings</span>
+        </div>
+        <div class="auth-stat">
+          <span class="auth-stat-num">50+</span>
+          <span class="auth-stat-label">Countries</span>
+        </div>
+        <div class="auth-stat">
+          <span class="auth-stat-num">5K+</span>
+          <span class="auth-stat-label">Happy Guests</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

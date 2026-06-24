@@ -1,19 +1,30 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+// Bootstrap form validation (replaces the original starter code)
 (() => {
   "use strict";
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
   const forms = document.querySelectorAll(".needs-validation");
-
-  // Loop over them and prevent submission
   Array.from(forms).forEach((form) => {
     form.addEventListener("submit", (event) => {
       if (!form.checkValidity()) {
         event.preventDefault();
         event.stopPropagation();
       }
-
       form.classList.add("was-validated");
     }, false);
   });
 })();
+
+// Show / hide password toggle
+document.querySelectorAll(".toggle-password").forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    const targetId = toggle.getAttribute("data-target");
+    const input = document.getElementById(targetId);
+    const icon = toggle.querySelector("i");
+    if (input.type === "password") {
+      input.type = "text";
+      icon.classList.replace("fa-eye", "fa-eye-slash");
+    } else {
+      input.type = "password";
+      icon.classList.replace("fa-eye-slash", "fa-eye");
+    }
+  });
+});

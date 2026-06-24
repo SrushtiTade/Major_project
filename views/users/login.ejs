@@ -1,0 +1,67 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="auth-page">
+
+  <!-- Left: Form -->
+  <div class="auth-left">
+    <div class="auth-card">
+
+      <div class="text-center mb-4">
+        <i class="fa-solid fa-compass auth-logo"></i>
+        <h2 class="auth-title mt-2">WanderLust</h2>
+        <p class="auth-subtitle">Welcome back</p>
+      </div>
+
+      <form action="/login" method="POST" novalidate class="needs-validation">
+
+        <div class="auth-input-group mb-3">
+          <span class="auth-input-icon"><i class="fa-solid fa-user"></i></span>
+          <input type="text" name="username" class="auth-input"
+            placeholder="Username" required autocomplete="username">
+          <div class="invalid-feedback">Username is required.</div>
+        </div>
+
+        <div class="auth-input-group mb-4">
+          <span class="auth-input-icon"><i class="fa-solid fa-lock"></i></span>
+          <input type="password" name="password" id="loginPassword" class="auth-input"
+            placeholder="Password" required autocomplete="current-password">
+          <span class="auth-input-icon-right toggle-password" data-target="loginPassword">
+            <i class="fa-solid fa-eye"></i>
+          </span>
+          <div class="invalid-feedback">Password is required.</div>
+        </div>
+
+        <button class="btn auth-btn w-100">Log In</button>
+      </form>
+
+      <div class="auth-divider"><span>or</span></div>
+
+      <p class="text-center auth-switch">
+        New to WanderLust? <a href="/signup">Sign up</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Right: Image Panel -->
+  <div class="auth-right">
+    <div class="auth-right-overlay">
+      <h2 class="auth-right-title">Welcome Back!</h2>
+      <p class="auth-right-sub">Your next adventure is just a click away. Log in to manage your listings and reviews.</p>
+      <div class="auth-right-stats">
+        <div class="auth-stat">
+          <span class="auth-stat-num">10K+</span>
+          <span class="auth-stat-label">Listings</span>
+        </div>
+        <div class="auth-stat">
+          <span class="auth-stat-num">50+</span>
+          <span class="auth-stat-label">Countries</span>
+        </div>
+        <div class="auth-stat">
+          <span class="auth-stat-num">5K+</span>
+          <span class="auth-stat-label">Happy Guests</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
