@@ -1,6 +1,6 @@
 # 🏡 WanderLust – Airbnb Clone
 
-A full-stack Airbnb-inspired web application built using Node.js, Express.js, MongoDB, Express, and EJS. The application allows users to create, view, update, and delete property listings along with reviews and ratings.
+A full-stack Airbnb-inspired web application built using **Node.js, Express.js, MongoDB, and EJS**. The application allows users to create, view, update, and delete property listings along with reviews and ratings.
 
 ---
 
@@ -17,6 +17,20 @@ A full-stack Airbnb-inspired web application built using Node.js, Express.js, Mo
 * Error handling middleware
 * Session management
 * Responsive user interface using Bootstrap
+
+---
+
+## 📸 Project Screenshots
+
+### 🏠 Home Page
+![Uploading {38918EC1-BEE2-4763-B0FF-A429DA737856}.png…]()
+
+
+
+### 👤 User Registration Page
+
+![Uploading {15CFE3DB-93AA-4528-8464-4462A6010B0F}.png…]()
+
 
 ---
 
@@ -51,31 +65,32 @@ A full-stack Airbnb-inspired web application built using Node.js, Express.js, Mo
 
 ## 🚀 Installation
 
-Clone the repository:
+### Clone the repository
 
 ```bash
 git clone https://github.com/SrushtiTade/Major_project.git
+cd Major_project
 ```
 
-Install dependencies:
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-Start MongoDB:
+### Start MongoDB
 
 ```bash
 mongod
 ```
 
-Run the application:
+### Run the application
 
 ```bash
 nodemon app.js
 ```
 
-Open:
+### Open in browser
 
 ```text
 http://localhost:8080
@@ -98,8 +113,13 @@ Major_project/
 │   ├── css/
 │   └── js/
 ├── utils/
+├── screenshots/
+│   ├── home-page.png
+│   └── signup-page.png
 ├── app.js
-└── package.json
+├── schema.js
+├── package.json
+└── README.md
 ```
 
 ---
@@ -132,6 +152,14 @@ Major_project/
 ## 👩‍💻 Author
 
 **Srushti Tade**
+Computer Science Engineering Student
+
+🔗 GitHub: https://github.com/SrushtiTade
+
+---
+
+⭐ If you like this project, consider giving it a star on GitHub.
+
 
 Computer Science Engineering Student
 
