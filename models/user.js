@@ -9,7 +9,5 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-// passport-local-mongoose auto adds: username, hash, salt + helper methods
 userSchema.plugin(passportLocalMongoose);
-
 module.exports = mongoose.model("User", userSchema);
