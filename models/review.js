@@ -8,7 +8,6 @@ const reviewSchema = new Schema({
     min: 1,
     max: 5,
   },
-  // who wrote this review
   author: {
     type: Schema.Types.ObjectId,
     ref: "User",

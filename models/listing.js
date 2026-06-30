@@ -10,6 +10,7 @@ const listingSchema = new Schema({
     url: {
       type: String,
       default: "https://placehold.co/800x400?text=No+Image",
+      set: (v) => v === "" ? "https://placehold.co/800x400?text=No+Image" : v,
     },
   },
   price: Number,

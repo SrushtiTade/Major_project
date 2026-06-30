@@ -1,5 +1,9 @@
+if (process.env.NODE_ENV != "production") {
+  require("dotenv").config();
+}
+
 const express = require("express");
-const app = express();
+const app = express(); // ← this line defines 'app'
 const mongoose = require("mongoose");
 const path = require("path");
 const methodOverride = require("method-override");
@@ -32,6 +36,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
 
+// ── Session ───────────────────────────────────────────────────
 app.use(session({
   secret: "wanderlust_secret_key",
   resave: false,
@@ -44,12 +49,14 @@ app.use(session({
 }));
 app.use(flash());
 
+// ── Passport (order matters!) ─────────────────────────────────
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+// ── Global locals ─────────────────────────────────────────────
 app.use((req, res, next) => {
   res.locals.success = req.flash("success");
   res.locals.error = req.flash("error");
@@ -57,20 +64,25 @@ app.use((req, res, next) => {
   next();
 });
 
+// ── Routes ────────────────────────────────────────────────────
 app.get("/", (req, res) => res.redirect("/listings"));
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
+// ── 404 ───────────────────────────────────────────────────────
 app.use((req, res, next) => {
   next(new ExpressError(404, "Page Not Found!"));
 });
 
+// ── Error handler ─────────────────────────────────────────────
 app.use((err, req, res, next) => {
+  console.log("ERROR:", err); // ADD THIS
   let { statusCode = 500, message = "Something Went Wrong!" } = err;
   res.status(statusCode).render("listings/error.ejs", { message });
 });
 
+// ── Start server ──────────────────────────────────────────────
 app.listen(8080, () => {
   console.log("Server running on http://localhost:8080");
 });

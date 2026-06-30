@@ -1,13 +1,13 @@
-
 <% layout("/layouts/boilerplate") %>
      <h3>Edit the Information</h3>
       <form method="POST" action="/listings/<%= listing._id %>?_method=PUT"
+          enctype="multipart/form-data"
           novalidate
           class="needs-validation">
       <div class="row mt-3">
           <div class="col-8 offset-2">
           <div  class="mb-3">
-           <lable for="title" class="form-label">Title</lable>
+           <label for="title" class="form-label">Title</label>
            <input name="listing[title]"
              value="<%= listing.title %>" type="text"
               class="form-control"
@@ -18,28 +18,34 @@
       </div>
 
       <div  class="mb-3">
-           <lable for="description" class="form-label">Description</lable>
+           <label for="description" class="form-label">Description</label>
           <textarea name="listing[description]" 
             class="form-control"
-            required><%= listing.description %>
-               </textarea>
+            required><%= listing.description %></textarea>
                <div class="invalid-feedback">
                   description should be valid
                </div>
       </div>
 
+      <div class="mb-3">
+        <label class="form-label">Current Image</label><br>
+        <img src="<%= listing.image.url %>" alt="current image"
+          style="width:200px; height:140px; object-fit:cover; border-radius:8px;" class="mb-2">
+      </div>
+
       <div  class="mb-3">
-           <lable for="image" class="form-label">Image</lable>
+           <label for="image" class="form-label">Change Image (optional)</label>
           <input name="listing[image]" 
-            value="<%= listing.image.url %>" type="text"   class="form-control"
-            required>
-              <div class="invalid-feedback">
-                  Image should be valid
+            type="file"   class="form-control"
+            accept="image/*">
+              <div class="form-text">
+                  Leave empty to keep the current image
                </div>
      </div>
+
      <div class="row">
      <div  class="mb-3">
-           <lable for="price" class="form-label">Price</lable>
+           <label for="price" class="form-label">Price</label>
            <input type="number" name="listing[price]" 
             value="<%= listing.price %>"   class="form-control"
             required>
@@ -49,7 +55,7 @@
       </div>
 
       <div  class="mb-3">
-           <lable for="country" class="form-label">Country</lable>
+           <label for="country" class="form-label">Country</label>
           <input type="text" name="listing[country]" 
            value="<%= listing.country %>"   class="form-control"
            required>
@@ -60,7 +66,7 @@
       </div>
 
       <div  class="mb-3">
-           <lable for="location" class="form-label">Location</lable>
+           <label for="location" class="form-label">Location</label>
           <input type="text" name="listing[location]" 
            value="<%= listing.location %>"   class="form-control"
            required>
