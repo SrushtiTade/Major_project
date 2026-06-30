@@ -203,19 +203,6 @@ http://localhost:8080
 
 ---
 
-# 📸 Screenshots
-
-> Add screenshots of your application here.
-
-* 🏠 Home Page
-* 📝 Create Listing
-* 📄 Listing Details
-* 🔐 Login Page
-* 👤 Signup Page
-* ⭐ Reviews Section
-
----
-
 # 🚀 Future Enhancements
 
 * 🔍 Search and Filter Listings
