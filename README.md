@@ -1,152 +1,244 @@
 # 🏡 WanderLust – Airbnb Clone
 
-A full-stack Airbnb-inspired web application built using **Node.js, Express.js, MongoDB, and EJS**. The application allows users to create, view, update, and delete property listings along with reviews and ratings.
+A full-stack Airbnb-inspired web application that allows users to explore, create, manage, and review property listings. Built using **Node.js, Express.js, MongoDB, and EJS**, the project follows the **MVC Architecture** and implements secure user authentication, authorization, image uploads, and complete CRUD operations.
 
 ---
 
 ## ✨ Features
 
-* View all listings
+### 🔐 User Authentication
+
+* User Registration (Sign Up)
+* User Login
+* User Logout
+* Secure password hashing using Passport.js
+* Persistent login sessions
+
+### 🏡 Property Listings
+
+* View all property listings
+* View detailed listing information
 * Create new listings
 * Edit existing listings
 * Delete listings
-* View detailed listing information
+* Upload property images
+
+### 📸 Image Upload
+
+* Upload images using Cloudinary
+* File handling with Multer
+* Cloud-based image storage
+
+### ⭐ Reviews & Ratings
+
 * Add reviews and ratings
+* Delete reviews
+* Display reviews on individual listing pages
+
+### 🛡 Authorization & Security
+
+* Authentication using Passport.js
+* Authorization for listing ownership
+* Authorization for review ownership
 * Server-side validation using Joi
+* Express Session management
 * Flash messages for user feedback
-* Error handling middleware
-* Session management
-* Responsive user interface using Bootstrap
+* Centralized error handling middleware
 
-## 🛠 Tech Stack
+### 🎨 User Interface
 
-### Frontend
+* Responsive design using Bootstrap 5
+* Clean and user-friendly interface
+* Reusable EJS layouts with EJS Mate
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
 
 * HTML5
 * CSS3
 * Bootstrap 5
+* JavaScript
 * EJS
 
-### Backend
+## Backend
 
 * Node.js
 * Express.js
 
-### Database
+## Database
 
 * MongoDB
 * Mongoose
 
-### Additional Packages
+## Authentication & Security
 
-* Joi
+* Passport.js
+* Passport Local
+* Passport Local Mongoose
 * Express Session
 * Connect Flash
+
+## File Upload & Storage
+
+* Cloudinary
+* Multer
+* Multer Storage Cloudinary
+
+## Validation & Utilities
+
+* Joi
 * Method Override
+* Dotenv
 * EJS Mate
 
 ---
 
-## 🚀 Installation
+# 📂 Project Structure
 
-### Clone the repository
+```text
+Major_project/
+│
+├── controllers/
+├── init/
+├── models/
+├── public/
+│   ├── css/
+│   ├── js/
+│   └── uploads/
+│
+├── routes/
+├── utils/
+├── views/
+│   ├── includes/
+│   ├── layouts/
+│   ├── listings/
+│   └── users/
+│
+├── middleware.js
+├── cloudConfig.js
+├── schema.js
+├── app.js
+├── package.json
+├── package-lock.json
+├── .env
+└── README.md
+```
+
+---
+
+# ⚙️ Environment Variables
+
+Create a `.env` file in the root directory and add the following variables:
+
+```env
+ATLASDB_URL=your_mongodb_connection_string
+
+SECRET=your_session_secret
+
+CLOUD_NAME=your_cloudinary_cloud_name
+
+CLOUD_API_KEY=your_cloudinary_api_key
+
+CLOUD_API_SECRET=your_cloudinary_api_secret
+```
+
+---
+
+# 🚀 Installation & Setup
+
+## 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/SrushtiTade/Major_project.git
 cd Major_project
 ```
 
-### Install dependencies
+## 2️⃣ Install Dependencies
 
 ```bash
 npm install
 ```
 
-### Start MongoDB
+## 3️⃣ Configure Environment Variables
+
+Create a `.env` file and add your MongoDB and Cloudinary credentials.
+
+## 4️⃣ Start the Application
 
 ```bash
-mongod
+npm start
 ```
 
-### Run the application
+or
 
 ```bash
 nodemon app.js
 ```
 
-### Open in browser
+## 5️⃣ Open in Browser
 
-```text
+```
 http://localhost:8080
 ```
 
 ---
 
-## 📁 Project Structure
-
-```text
-Major_project/
-│
-├── models/
-├── routes/
-├── views/
-│   ├── layouts/
-│   ├── includes/
-│   └── listings/
-├── public/
-│   ├── css/
-│   └── js/
-├── utils/
-├── screenshots/
-│   ├── home-page.png
-│   └── signup-page.png
-├── app.js
-├── schema.js
-├── package.json
-└── README.md
-```
-
----
-
-## 📚 Concepts Used
+# 📚 Concepts Implemented
 
 * MVC Architecture
 * RESTful Routing
 * CRUD Operations
+* Authentication
+* Authorization
 * Middleware
 * Session Management
-* Form Validation
+* Server-side Validation
+* File Uploads
+* Cloud Storage Integration
 * Error Handling
 * Flash Messages
 
 ---
 
-## 🔮 Future Improvements
+# 📸 Screenshots
 
-* User Authentication
-* Authorization
-* Cloudinary Image Upload
-* Map Integration
-* Search and Filters
-* Booking System
-* Payment Gateway
+> Add screenshots of your application here.
+
+* 🏠 Home Page
+* 📝 Create Listing
+* 📄 Listing Details
+* 🔐 Login Page
+* 👤 Signup Page
+* ⭐ Reviews Section
 
 ---
 
-## 👩‍💻 Author
+# 🚀 Future Enhancements
+
+* 🔍 Search and Filter Listings
+* 🗺 Google Maps Integration
+* ❤️ Wishlist / Favorites
+* 📅 Booking System
+* 💳 Payment Gateway Integration
+* 👤 User Profile Dashboard
+* 📧 Email Verification
+* 🌙 Dark Mode
+
+---
+
+# 👩‍💻 Author
 
 **Srushti Tade**
-Computer Science Engineering Student
-
-🔗 GitHub: https://github.com/SrushtiTade
-
----
-
-⭐ If you like this project, consider giving it a star on GitHub.
-
 
 Computer Science Engineering Student
 
+GitHub: https://github.com/SrushtiTade
+
 ---
 
-⭐ If you like this project, give it a star on GitHub.
+## ⭐ Support
+
+If you found this project helpful or interesting, please consider giving it a **⭐ Star** on GitHub. Your support is greatly appreciated!
